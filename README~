@@ -1,0 +1,16 @@
+John Grossmann: jg3538
+
+To run, follow instructions for running given in the homework submission guidelines.
+
+Program Notes:
+
+Any attempt at modification of /home or /tmp acl will result in no permission error.
+
+Was not sure about this based on the guidelines, but the DELETE command actually deletes the file if it has the permissions to do so. 
+
+Any blank line in the input file will be treated as an error.
+
+If the ACL entry has any errors in it, the entire ACL will be skipped an the command to either CREATE or ACL will fail as an error.
+
+Max line size in the file is 8192 bytes. I know users and groups should not have a limit on their size, but I believe that any line
+bigger than 8192 bytes (even lines a good size smaller thatn 8192 bytes), has no plausible use case for this program.

@@ -494,6 +494,7 @@ FILE *parseUserDefinition(FILE *fp, file *root, userList **users) {
     file *createdFile = NULL;
     
     while(fgets(line, bufSize, fp) != NULL) {
+        printf("%s", line);
         lineNum++;
         if(strlen(line) > 8191) {
             printUserDefinition(lineNum, 'X', "ERROR: Line is too long");

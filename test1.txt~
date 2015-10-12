@@ -21,5 +21,4 @@ WRITE bollinger.columbia /tmp/low.library
 DELETE smb.columbia /home/smb/foo
 DELETE smb.faculty /home/smb/foo
 CREATE smb.columbia /home/smb/foo
-.
 WRITE smb.columbia /home/smb/foo

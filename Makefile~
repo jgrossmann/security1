@@ -22,8 +22,6 @@ SecureFS: $(OBJ)
 test:	build
 	./SecureFS "test1.txt"
 	@echo "-----------"
-	./SecureFS "test2.txt"
-	@echo "-----------"
 
 exec: build
 	./SecureFS $(ARG)
