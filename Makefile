@@ -1,19 +1,21 @@
-# A simple Makefile
-
-# List the object files in one place
-OBJ=AccessControlList.o
 
 # The first target is the default if you just say "make".  In this
 # case, "build" relies on "sample", because I want the executable to be
 # called "sample"
 
-build:	SecureFS
+all: addqueue showqueue rmqueue
 
 # "sample" requires a set of object files
 # $@ is a special variable: the target of the operation, in this case sample
 # $? is the
-SecureFS: $(OBJ)
-	gcc -g -o $@ $(OBJ)
+addqueue: AddQueue.o
+	gcc -g -o $@ AddQueue.o -lm
+	
+showqueue: ShowQueue.o
+	gcc -g -o $@ ShowQueue.o -lm
+	
+rmqueue: RmQueue.o
+	gcc -g -o $@ RmQueue.o -lm
 
 # Before testing, we must compile.  
 # Lines preceeded by @ aren't echoed before executing
@@ -29,4 +31,4 @@ exec: build
 	./SecureFS $(ARG)
 
 clean:
-	rm -f sample *.core *.o
+	rm -f addqueue showqueue rmqueue *.core *.o
